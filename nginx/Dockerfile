@@ -7,5 +7,6 @@ RUN curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.
 
 COPY filebeat.yml /etc/filebeat/filebeat.yml
 COPY entrypoint.sh /entrypoint.sh
+COPY default.conf /etc/nginx/conf.d/default.conf
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
